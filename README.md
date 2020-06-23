@@ -39,7 +39,7 @@
 
 ## 关于接口
 
-- 图片来源：[http://emoji.kuranado.com](http://emoji.kuranado.com)
+所有图片均来源与我的表情包网站：[http://emoji.kuranado.com](http://emoji.kuranado.com)，目前本网站表情包数量有限，待后续用户投稿功能上线之后，将进一步丰富图片
 
 ## 参考资料
 
