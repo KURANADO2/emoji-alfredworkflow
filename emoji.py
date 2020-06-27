@@ -77,7 +77,8 @@ def main(wf):
                     subtitle=emoji['path'],
                     arg=emoji['path'],
                     valid=True,
-                    icon=emoji['path'])
+                    icon=emoji['path'],
+                    quicklookurl=emoji['path'])
 
     wf.send_feedback()
 
