@@ -49,3 +49,4 @@
 - [知乎 - 借助 Alfred 的 Workflows 功能可以做哪些好玩的事情？](https://www.zhihu.com/question/20656680)
 - [GitHub - Alfred-Find-Meme](https://github.com/echo-cool/Alfred-Find-Meme)
 - [GitHub - Alfred-Find-emoji](https://github.com/echo-cool/Alfred-Find-emoji)
+- [CSDN - Python多线程下载网络URL图片的方法](https://blog.csdn.net/guyuealian/article/details/92084641)
