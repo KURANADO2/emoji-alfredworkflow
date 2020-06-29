@@ -69,7 +69,7 @@ def main(wf):
         if colon_index == len(query) - 1:
             wf.add_item(title=u'请输入关键词或页码', valid=True, icon=ICON_DEFAULT)
             wf.send_feedback()
-            return 
+            return
         key = query[0:colon_index]
         page = int(query[colon_index + 1:])
     except ValueError:

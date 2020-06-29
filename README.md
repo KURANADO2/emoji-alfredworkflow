@@ -56,3 +56,4 @@
 - [GitHub - Alfred-Find-Meme](https://github.com/echo-cool/Alfred-Find-Meme)
 - [GitHub - Alfred-Find-emoji](https://github.com/echo-cool/Alfred-Find-emoji)
 - [CSDN - Python多线程下载网络URL图片的方法](https://blog.csdn.net/guyuealian/article/details/92084641)
+- [GitHub - DepQuery - 一个搜索java依赖的Alfred插件](https://github.com/kiwiflydream/DepQuery)
