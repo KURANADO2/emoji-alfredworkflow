@@ -11,9 +11,9 @@ ICON_DEFAULT = 'icon.png'
 headers = {"Referer": "http://kuranado.com"}
 
 
-def list_emoji(query=None):
+def list_emoji(query=None, page=1):
     url = "http://api.kuranado.com/emoji/list"
-    params = dict(keyword=query, page=1, size=9)
+    params = dict(keyword=query, page=page, size=9)
 
     r = web.get(url, params)
 
@@ -61,12 +61,25 @@ def main(wf):
         query = wf.args[0]
     else:
         query = None
+    # print('%s', query)
+    key = query
+    page = 1
+    try:
+        colon_index = query.rindex(' ')
+        if colon_index == len(query) - 1:
+            wf.add_item(title=u'请输入关键词或页码', valid=True, icon=ICON_DEFAULT)
+            wf.send_feedback()
+            return 
+        key = query[0:colon_index]
+        page = int(query[colon_index + 1:])
+    except ValueError:
+        pass
 
     # def wrapper():
     #     return list(query)
     #
     # emojis = wf.cached_data('list', wrapper, max_age=600)
-    emojis = list_emoji(query)
+    emojis = list_emoji(key, page)
 
     if len(emojis) <= 0:
         wf.add_item(title=u'未找到表情包', valid=True, icon=ICON_DEFAULT)
