@@ -75,11 +75,12 @@ def main(wf):
     except ValueError:
         pass
 
-    # def wrapper():
-    #     return list(query)
-    #
-    # emojis = wf.cached_data('list', wrapper, max_age=600)
-    emojis = list_emoji(key, page)
+    def wrapper():
+        return list_emoji(key, page)
+
+    # 使用缓存，以查询参数（包括查询关键字和页码）作为缓存的 key，缓存 2 小时
+    emojis = wf.cached_data(query, wrapper, max_age=7200)
+    # emojis = list_emoji(key, page)
 
     if len(emojis) <= 0:
         wf.add_item(title=u'未找到表情包', valid=True, icon=ICON_DEFAULT)
