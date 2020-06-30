@@ -8,7 +8,13 @@ import urllib2
 import os
 
 ICON_DEFAULT = 'icon.png'
+
 headers = {"Referer": "http://kuranado.com"}
+
+cache_path = os.getenv('cache_path', '/tmp/emoji/')
+
+if cache_path[len(cache_path) - 1] != '/':
+    cache_path = cache_path + '/'
 
 
 def list_emoji(query=None, page=1):
@@ -23,16 +29,15 @@ def list_emoji(query=None, page=1):
     emojis = []
     data = r.json()
 
-    path = "/tmp/emoji/"
-    if not os.path.exists(path):
-        os.makedirs(path)
+    if not os.path.exists(cache_path):
+        os.makedirs(cache_path)
 
     pool = ThreadPool(processes=4)
 
     for d in data['data']:
 
         image_name = d['url'][d['url'].index('emoji') + 6:]
-        key_name = path + image_name
+        key_name = cache_path + image_name
         d['path'] = key_name
         emojis.append(d)
 
@@ -65,13 +70,13 @@ def main(wf):
     key = query
     page = 1
     try:
-        colon_index = query.rindex(' ')
-        if colon_index == len(query) - 1:
+        last_space_index = query.rindex(' ')
+        if last_space_index == len(query) - 1:
             wf.add_item(title=u'请输入关键词或页码', valid=True, icon=ICON_DEFAULT)
             wf.send_feedback()
             return
-        key = query[0:colon_index]
-        page = int(query[colon_index + 1:])
+        key = query[0:last_space_index]
+        page = int(query[last_space_index + 1:])
     except ValueError:
         pass
 
