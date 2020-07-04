@@ -6,12 +6,15 @@ from workflow import Workflow3, web
 from multiprocessing.pool import ThreadPool
 import urllib2
 import os
+import re
 
 ICON_DEFAULT = 'icon.png'
 
 headers = {"Referer": "http://kuranado.com"}
 
 cache_path = os.getenv('cache_path', '/tmp/emoji/')
+
+int_number = re.compile(r'[0-9]')
 
 if cache_path[len(cache_path) - 1] != '/':
     cache_path = cache_path + '/'
@@ -71,12 +74,19 @@ def main(wf):
     page = 1
     try:
         last_space_index = query.rindex(' ')
+        # 用户在末尾输入空格
         if last_space_index == len(query) - 1:
             wf.add_item(title=u'请输入关键词或页码', valid=True, icon=ICON_DEFAULT)
             wf.send_feedback()
             return
-        key = query[0:last_space_index]
-        page = int(query[last_space_index + 1:])
+        # 用户在末尾输入的是空格和页码数字
+        if int_number.match(query[last_space_index + 1:]):
+            key = query[0:last_space_index]
+            page = int(query[last_space_index + 1:])
+        else:
+            # 用户在末尾输入的是空格和关键词
+            key = query
+
     except ValueError:
         pass
 
