@@ -262,7 +262,7 @@
 	<key>readme</key>
 	<string>## 表情包搜索应用
 
-1. 右侧的 cache_path 为表情包图片的缓存路径，默认值为 /tmp/emoji/，若想将表情包图片缓存到其它目录，请更改右侧 cache_path 值为对应目录
+1. 左侧的 cache_path 为表情包图片的缓存路径，默认值为 /tmp/emoji/，若想将表情包图片缓存到其它目录，请更改右侧 cache_path 值为对应目录
 2. 配置唤醒快捷键，如无快捷键冲突，建议配置为 `Option + K`
 3. 使用上一步配置的快捷键唤起工作流脚本，输入关键词搜索表情包
 4. 上下键选择表情包，回车键复制表情包，回车后，选中的表情图片将被自动拷贝到剪贴板（选择表情包时，可按 Shift 放大预览图片）
@@ -320,7 +320,7 @@
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0.4</string>
+	<string>1.0.5</string>
 	<key>webaddress</key>
 	<string>emoji.kuranado.com</string>
 </dict>
