@@ -6,6 +6,19 @@
 	<string>com.kuranado</string>
 	<key>connections</key>
 	<dict>
+		<key>0359F8EF-6170-4924-A80F-34A53C907FA3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C787371A-C354-4E89-AB0E-E4472ABCA205</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>1DBF94DC-FE7D-4A3F-918A-5D763EE25111</key>
 		<array>
 			<dict>
@@ -177,6 +190,74 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>正在查询是否有新版本...</string>
+				<key>script</key>
+				<string>python update.py</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>更新表情包搜索应用</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>C787371A-C354-4E89-AB0E-E4472ABCA205</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>update</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>更新表情包搜索应用</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>0359F8EF-6170-4924-A80F-34A53C907FA3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>## 表情包搜索应用
@@ -188,6 +269,13 @@
 5. 回到微信、QQ 等聊天界面，`Command + V` 粘贴表情包</string>
 	<key>uidata</key>
 	<dict>
+		<key>0359F8EF-6170-4924-A80F-34A53C907FA3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>220</integer>
+			<key>ypos</key>
+			<integer>620</integer>
+		</dict>
 		<key>0640E789-8765-4024-A969-2F15B0E74EEB</key>
 		<dict>
 			<key>xpos</key>
@@ -208,6 +296,13 @@
 			<integer>725</integer>
 			<key>ypos</key>
 			<integer>265</integer>
+		</dict>
+		<key>C787371A-C354-4E89-AB0E-E4472ABCA205</key>
+		<dict>
+			<key>xpos</key>
+			<integer>470</integer>
+			<key>ypos</key>
+			<integer>620</integer>
 		</dict>
 		<key>E1368BC6-14FC-416C-B47B-61ACB20407D0</key>
 		<dict>
