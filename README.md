@@ -13,20 +13,26 @@
 
 ## 使用方法
 
-![image](./images/config.jpg)
-![image](./images/demo.gif)
+![配置](./images/config.png)
+![demo](./images/demo.gif)
 
-1. 配置唤醒快捷键，如无快捷键冲突，建议配置为 `Option + K`
+1. 安装后配置唤醒快捷键，如无快捷键冲突，建议配置为 `Option + K`
 2. 使用上一步配置的快捷键唤起工作流脚本，输入关键词搜索表情包
-3. 上下键选择表情包，回车键复制表情包，回车后，选中的表情图片将被自动拷贝到剪贴板（选择表情包时，可按 Shift 放大预览图片）
+3. 上下键选择表情包，回车键复制表情包，回车后，选中的表情图片将被自动拷贝到剪贴板
 4. 回到微信、QQ 等聊天界面，`Command + V` 粘贴表情包
 
 ## 搜索小技巧
 
-查询语法为：`关键字1[一个空格关键字2][1个空格关键字3]...[1个空格关键字n][1个空格页码]`
+- 查询语法为：`关键词1[一个空格关键词2][1个空格关键词3]...[1个空格关键词n][1个空格页码]`
 如：`come again 3`，则将 `come` 作为`关键词 1`，`again` 作为`关键词 2`，`3` 表示查询第 3 页
+- 选择表情包时，可按 Shift 放大预览图片
+![多关键词及分页演示](./images/demo-page.gif)
 
-![image](./images/demo-page.gif)
+## 如何更新
+
+- 使用命令触发更新：调起 Alfred 后，输入 `update` 关键字即可检查更新，如果有新版本，将自动下载并安装到 Alfred 中 
+![如何更新](./images/update.png)
+- 手动更新：访问 [GitHub Releases 下载页面](https://github.com/KURANADO2/emoji-alfredworkflow/releases)，手动下载当前最新版本，双击将安装更新到 Alfred 中
 
 ## 实现原理
 
@@ -48,7 +54,7 @@
 
 ## 关于接口
 
-所有图片均来源与我的表情包网站：[http://emoji.kuranado.com](http://emoji.kuranado.com)，目前本网站表情包数量有限，待后续用户投稿功能上线之后，将进一步丰富图片
+所有图片均来源于我的表情包网站：[http://emoji.kuranado.com](http://emoji.kuranado.com)，目前本网站表情包数量有限（6K+），待后续用户投稿功能上线之后，将进一步丰富图片
 
 ## 参考资料
 
