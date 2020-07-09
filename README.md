@@ -37,10 +37,10 @@
 ## 实现原理
 
 1. 调用后台接口，返回图片列表，默认只查询第一页 9 张图片
-2. 将图片下载到本地目录，默认为 `/tmp/emoji/` 目录，可通过如下方式更改为其它目录
-    ![image](./images/config-variables.jpg)
+2. 将图片下载到本地目录，默认为 `/Users/用户家目录/.emoji/` 目录，可通过如下方式更改为其它目录
+    ![image](./images/config-variables.png)
 3. 回车选择图片后，调用脚本，将图片拷贝到剪贴板中
-4. 到微信中直接 Command + V 键粘贴
+4. 微信中 Command + V 发送
 
 ## 为什么有此项目
 
