@@ -11,8 +11,10 @@ import re
 ICON_DEFAULT = 'icon.png'
 
 headers = {"Referer": "http://kuranado.com"}
-
-cache_path = os.getenv('cache_path', '/tmp/emoji/')
+user_home_dir = os.path.expanduser('~') + "/.emoji"
+cache_path = os.getenv('cache_path', user_home_dir)
+if cache_path == "":
+    cache_path = user_home_dir
 
 int_number = re.compile(r'[0-9]')
 
