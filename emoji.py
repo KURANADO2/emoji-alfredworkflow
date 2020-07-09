@@ -37,7 +37,7 @@ def list_emoji(query=None, page=1):
     if not os.path.exists(cache_path):
         os.makedirs(cache_path)
 
-    pool = ThreadPool(processes=4)
+    pool = ThreadPool(processes=len(data['data']))
 
     for d in data['data']:
 
