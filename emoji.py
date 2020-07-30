@@ -23,7 +23,8 @@ if cache_path[len(cache_path) - 1] != '/':
 
 
 def list_emoji(query=None, page=1):
-    url = "http://api.kuranado.com/emoji/list"
+    url = "http://api.kuranado.com/emoji/search"
+    # url = "http://127.0.0.1:20001/emoji/search"
     params = dict(keyword=query, page=page, size=9)
 
     r = web.get(url, params)
