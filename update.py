@@ -10,10 +10,7 @@ ICON_DEFAULT = 'icon.png'
 def main(wf):
 
     if wf.update_available:
-        wf.add_item('有可用的新版本',
-                    '回车安装新版本',
-                    autocomplete='workflow:update',
-                    icon=ICON_DEFAULT)
+        wf.start_update()
     else:
         wf.add_item('暂无可用新版本',
                     icon=ICON_DEFAULT)
