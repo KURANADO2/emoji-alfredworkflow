@@ -58,6 +58,12 @@
 
 所有图片均来源于我的表情包网站：[http://emoji.kuranado.com](http://emoji.kuranado.com)，目前本网站表情包数量有限（6K+），待后续用户投稿功能上线之后，将进一步丰富图片
 
+## Hammerspoon 版表情包搜索
+
+Hammerspoon 版表情包搜索见：[https://github.com/KURANADO2/hammerspoon-kuranado](https://github.com/KURANADO2/hammerspoon-kuranado)
+
+使用 Hammerspoon 实现表情包搜索相对 Alfred 来说会更麻烦一些，感兴趣的同学可以了解一下
+
 ## 参考资料
 
 - [GitHub - alfred-workflow](https://github.com/deanishe/alfred-workflow)
